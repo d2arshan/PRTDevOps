@@ -1,5 +1,5 @@
 pipeline {
-  agent any  // Runs directly on Jenkins master
+  agent "slave"  // Runs directly on Jenkins master
   
   stages {
     stage('Clone Repo') {
