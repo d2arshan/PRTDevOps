@@ -5,7 +5,7 @@ pipeline {
     stage('Clone Repo') {
       steps {
         git(url: 'https://github.com/d2arshan/PRTDevOps', branch: 'main') 
-      }
+      } 
     }
 
     stage('Run Ansible Playbook') {
