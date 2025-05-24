@@ -1,5 +1,5 @@
 pipeline {
-  agent "slave"  // Runs directly on Jenkins master
+  agent any  // Runs directly on Jenkins master
   
   stages {
     stage('Clone Repo') {
@@ -8,12 +8,3 @@ pipeline {
       } 
     }
 
-    stage('Run Ansible Playbook') {
-      steps {
-        sh '''
-          ansible-playbook playbook.yaml -i /etc/ansible/hosts
-        '''
-      }
-    }
-  }
-}
