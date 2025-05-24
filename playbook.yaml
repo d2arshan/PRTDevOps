@@ -7,7 +7,7 @@
         name: apache2
         state: present
 
-- name: Install Nginx on Slave 2
+- name: Install Nginx on Slave 2 
   hosts: slave 
   become: true
   tasks:
