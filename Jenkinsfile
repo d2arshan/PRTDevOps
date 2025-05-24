@@ -9,7 +9,7 @@ pipeline {
         }
 
         stage('Run Ansible Playbook') {
-            agent { label 'master' } // This runs the step on the Jenkins master node
+            agent any
             steps {
                 sh '''
                     ansible-playbook playbook.yaml -i /etc/ansible/hosts
