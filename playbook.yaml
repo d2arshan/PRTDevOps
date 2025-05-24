@@ -12,6 +12,6 @@
   become: true
   tasks:
     - name: Install nginx 
-      apt:
+      apt: 
         name: nginx
         state: present  
