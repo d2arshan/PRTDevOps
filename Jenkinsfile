@@ -12,7 +12,7 @@ pipeline {
             agent any
             steps {
                 sh '''
-                    ansible-playbook playbook.yaml -i /etc/ansible/hosts
+                   ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook playbook.yaml -i /etc/ansible/hosts
                 '''
             }
         }
