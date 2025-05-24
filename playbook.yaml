@@ -11,7 +11,7 @@
   hosts: slave2
   become: true
   tasks:
-    - name: Install nginx
+    - name: Install nginx 
       apt:
         name: nginx
         state: present  
